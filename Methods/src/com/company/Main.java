@@ -12,6 +12,10 @@ public class Main {
         }
 
         System.out.println(tellMeTheScore(result));
+
+	    SpeedConverter converter = new SpeedConverter();
+
+	    converter.printConversion(10.25);
     }
 
     public static int calculateScore(Integer input) {
