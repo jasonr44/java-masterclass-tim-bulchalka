@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.Scanner;
+
 public class Main {
 
     private static boolean cool = false;
@@ -16,10 +18,15 @@ public class Main {
 //	    SpeedConverter converter = new SpeedConverter();
 //
 //	    converter.printConversion(10.25);
-        int newScore = calculateScore("Jason", 500);
-        System.out.println("New score is " + newScore);
-        int unamedPlayerScore = calculateScore(200);
-        System.out.println("Unamed score is " + unamedPlayerScore);
+
+//        // OverLoads
+//        int newScore = calculateScore("Jason", 500);
+//        System.out.println("New score is " + newScore);
+//        int unamedPlayerScore = calculateScore(200);
+//        System.out.println("Unamed score is " + unamedPlayerScore);
+
+        // User Input
+        readUserInput();
     }
 
     public static int calculateScore(Integer input) {
@@ -38,5 +45,18 @@ public class Main {
     public static int calculateScore(int score) {
         System.out.println("Unamed player scored " + score + " points");
         return score * 1000;
+    }
+
+    public static void readUserInput() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter your year of birth: ");
+        int age = 2020 - scanner.nextInt();
+        scanner.nextLine(); // handle next line character (enter key)
+
+        System.out.println("Enter your name: ");
+        String name = scanner.nextLine();
+
+        System.out.println("Your name is " + name + ". Your age is " + age);
+        scanner.close();
     }
 }
