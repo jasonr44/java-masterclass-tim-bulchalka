@@ -14,11 +14,13 @@ public class Main {
         // Getter/Setter
         Car goodCar = new Car();
         Car badCar = new Car();
+        Car constructedCar = new Car("mustang");
 
         goodCar.setModel("mustang");
         badCar.setModel("escort");
 
         System.out.println("Good car is " + goodCar.getModel());
         System.out.println("Bad car is " + badCar.getModel());
+        System.out.println("Constructed car is " + constructedCar.getModel());
     }
 }
