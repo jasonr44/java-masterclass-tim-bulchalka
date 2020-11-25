@@ -3,28 +3,26 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-//        // Casting
-//	    SpeedConverter converter = new SpeedConverter();
-//	    converter.printConversion(10.25);
-//
-//        // User Input
-//        MethodTester methodTester = new MethodTester();
-//        methodTester.readUserInput();
+        GroceryList groceryList = new GroceryList();
 
-        // Getter/Setter
-        Car goodCar = new Car();
-        Car badCar = new Car();
-        Car constructedCar = new Car("mustang");
-        Mustang mustang =  new Mustang();
+        groceryList.addGroceryItem("Chicken");
+        groceryList.addGroceryItem("Oreos");
+        groceryList.addGroceryItem("Bananas");
+        groceryList.addGroceryItem("Fruit Loops");
 
-        goodCar.setModel("mustang");
-        badCar.setModel("escort");
-        mustang.drive();
-        mustang.drive();
-        mustang.drive();
+        groceryList.printGroceryList();
 
-        System.out.println("Good car is " + goodCar.getModel());
-        System.out.println("Bad car is " + badCar.getModel());
-        System.out.println("Constructed car is " + constructedCar.getModel());
+        groceryList.modifyGroceryItem(0, "Turkey");
+        groceryList.removeGroceryItem(3);
+
+        String existingItem = groceryList.findGroceryItem("Turkey");
+        String nonExistingItem = groceryList.findGroceryItem("Chicken");
+
+        System.out.println("========== Changes ============");
+        groceryList.printGroceryList();
+
+        System.out.println("========== Search Results ============");
+        System.out.println("Should exist: " + existingItem);
+        System.out.println("Should NOT exist: " + nonExistingItem);
     }
 }
