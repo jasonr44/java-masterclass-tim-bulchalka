@@ -4,6 +4,7 @@ package com.company;
 public class Car {
     private String model;
     private String make;
+    public Boolean isDriving = false;
 
     public Car() {
         System.out.println("You'll need to add a model");
@@ -47,5 +48,9 @@ public class Car {
         }
 
         this.model = validModel;
+    }
+    
+    public void drive() {
+        this.isDriving = !this.isDriving;
     }
 }

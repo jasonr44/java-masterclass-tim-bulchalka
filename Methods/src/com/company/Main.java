@@ -15,9 +15,13 @@ public class Main {
         Car goodCar = new Car();
         Car badCar = new Car();
         Car constructedCar = new Car("mustang");
+        Mustang mustang =  new Mustang();
 
         goodCar.setModel("mustang");
         badCar.setModel("escort");
+        mustang.drive();
+        mustang.drive();
+        mustang.drive();
 
         System.out.println("Good car is " + goodCar.getModel());
         System.out.println("Bad car is " + badCar.getModel());
