@@ -3,26 +3,23 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-        GroceryList groceryList = new GroceryList();
+       GenericTest<Integer,String> genericTest = new GenericTest();
 
-        groceryList.addGroceryItem("Chicken");
-        groceryList.addGroceryItem("Oreos");
-        groceryList.addGroceryItem("Bananas");
-        groceryList.addGroceryItem("Fruit Loops");
+       genericTest.getAllElements();
+       genericTest.changeMainEl(1);
+       genericTest.allElements.add(2);
+       genericTest.allElements.add(3);
 
-        groceryList.printGroceryList();
+       genericTest.getAllElements();
+       int mainEl = genericTest.getMainElement();
+       genericTest.setSecondaryElement("3Three");
+       genericTest.getSecondaryElement();
 
-        groceryList.modifyGroceryItem(0, "Turkey");
-        groceryList.removeGroceryItem(3);
-
-        String existingItem = groceryList.findGroceryItem("Turkey");
-        String nonExistingItem = groceryList.findGroceryItem("Chicken");
-
-        System.out.println("========== Changes ============");
-        groceryList.printGroceryList();
-
-        System.out.println("========== Search Results ============");
-        System.out.println("Should exist: " + existingItem);
-        System.out.println("Should NOT exist: " + nonExistingItem);
+       try {
+           System.out.println(mainEl);
+       } catch (Exception err) {
+           System.out.println("errored out");
+       }
+       genericTest.printArray();
     }
 }
