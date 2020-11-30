@@ -3,6 +3,7 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-        StreamThings streamThings = new StreamThings();
+        // Requires installing sqlite jdbc library/driver
+        BetterTestDB betterTestDB = new BetterTestDB();
     }
 }
